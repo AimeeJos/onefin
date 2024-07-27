@@ -4,6 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from movies.serializers import MovieSerializer, CollectionSerializer
 from django.core.paginator import Paginator
+
 import requests
 
 def get_request_for_movies():
@@ -37,8 +38,8 @@ class ListMovies(views.APIView):
     def get(self, request):
         
         data = get_request_for_movies()
-            
-        return Response(data)
+        
+        return data
     
     
     
