@@ -35,11 +35,9 @@ class ListCollection(viewsets.ModelViewSet):
         return context
     
 class ListMovies(views.APIView):
-    def get(self, request):
-        
-        data = get_request_for_movies()
-        
-        return data
+    def get(self, request):        
+        data = get_request_for_movies()        
+        return Response(data)
     
     
     
